@@ -1,4 +1,4 @@
-﻿namespace PythagorasTree
+﻿namespace GraphicsLearn
 {
     partial class Task3
     {
@@ -120,7 +120,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Task3";
             this.Text = "Form1";
-            this.SizeChanged += new System.EventHandler(this.Task3_SizeChanged);
+            this.ResizeEnd += new System.EventHandler(this.Task3_ResizeEnd);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Iter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();

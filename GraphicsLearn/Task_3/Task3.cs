@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PythagorasTree
+namespace GraphicsLearn
 {
     public partial class Task3 : Form
     {
@@ -37,8 +37,8 @@ namespace PythagorasTree
 
                 g.DrawLine(p, (float)x, (float)y, (float)xnew, (float)ynew);
 
-                DrawTree(xnew, ynew, a, angle + this._angle45);
                 DrawTree(xnew, ynew, a, angle - this._angle60);
+                DrawTree(xnew, ynew, a, angle + this._angle45);
             }
         }
 
@@ -59,12 +59,14 @@ namespace PythagorasTree
             this._angle45 = Math.PI / 4; this._angle60 = Math.PI / 4;
             PrintPythagor();
         }
-        private void Task3_SizeChanged(object sender, EventArgs e) => PrintPythagor();
-
         private void button2_Click(object sender, EventArgs e)
         {
             this._angle45 = Math.PI / 4; this._angle60 = Math.PI / 6;
             PrintPythagor();
         }
+
+
+        private void Task3_ResizeEnd(object sender, EventArgs e) => PrintPythagor();
+
     }
 }

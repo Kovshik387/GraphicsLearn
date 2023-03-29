@@ -1,4 +1,5 @@
 ﻿using GraphicsLearn;
+using GraphicsLearn.Task_4;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace GraphicsLearn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Task3());
+            Application.Run(new Task4());
         }
     }
 }

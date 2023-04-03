@@ -39,6 +39,10 @@ namespace GraphicsLearn.Task_4
             beziers.Add(new Bezier(new Point(this.pictureBox1.Width / 2, 100), new Point(this.pictureBox1.Width / 2 - 10, 80), new Point(this.pictureBox1.Width / 2 + 10, 30), new Point(this.pictureBox1.Width / 2 + 90, 20)));
             beziers.Add(new Bezier(new Point(this.pictureBox1.Width / 2, 100), new Point(this.pictureBox1.Width / 2 - 10, 48), new Point(this.pictureBox1.Width / 2 + 60, 60), new Point(this.pictureBox1.Width / 2 + 90, 20)));
 
+            //Червяк
+            beziers.Add(new Bezier(new Point(this.pictureBox1.Width / 2 + 40, this.pictureBox1.Height /2 + 50 ), new Point(this.pictureBox1.Width / 2 + 90, this.pictureBox1.Height / 2 + 50), new Point(this.pictureBox1.Width / 2 + 200, this.pictureBox1.Height / 2 + 40), new Point(this.pictureBox1.Width / 2 + 260, this.pictureBox1.Height / 2 - 20)));
+            beziers.Add(new Bezier(new Point(this.pictureBox1.Width / 2 + 20 , this.pictureBox1.Height / 2 + 30), new Point(this.pictureBox1.Width / 2 + 10, this.pictureBox1.Height / 2), new Point(this.pictureBox1.Width / 2 + 280, this.pictureBox1.Height / 2 - 60), new Point(this.pictureBox1.Width / 2 + 260, this.pictureBox1.Height / 2 -20)));
+            beziers.Add(new Bezier(new Point(this.pictureBox1.Width / 2 + 190, this.pictureBox1.Height / 2), new Point(this.pictureBox1.Width / 2 + 110,this.pictureBox1.Height / 2 + 20), new Point(this.pictureBox1.Width / 2 + 220, this.pictureBox1.Height / 2 + 20), new Point(this.pictureBox1.Width / 2 + 210, this.pictureBox1.Height / 2 )));
 
             LogicTask4.PrintLines(this.graphics, beziers, Show_Control.Checked);
             this.pictureBox1.Image = this.bitmap;

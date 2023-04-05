@@ -138,8 +138,6 @@ namespace GraphicsLearn.Task_5
             
             currentAnimationIndex++;
 
-            if (currentAnimation == CurrentAnimation.Space) Animation();
-
             Animation();
         }
 
@@ -187,7 +185,7 @@ namespace GraphicsLearn.Task_5
             {
                 case CurrentAnimation.Right:
                     character = Image.FromFile($@"C:\Users\Yrulewet\source\repos\LearcnCS\GraphicsLearn\GraphicsLearn\Task_5\Sprite\Walk\RightWalk{currentAnimationIndex}.png");
-                    this.graphics.DrawImage(character,positionPlayer.X,positionPlayer.Y, new Rectangle(new Point(0,0),new Size(125,125)),GraphicsUnit.Pixel);
+                    this.graphics.DrawImage(character,positionPlayer.X,positionPlayer.Y);
                     if (!(this.positionPlayer.X >= Scene.Width - 120)) this.positionPlayer.X += 5;
                     SetAnimation();
                     LastPressed = CurrentAnimation.Right;
@@ -195,22 +193,24 @@ namespace GraphicsLearn.Task_5
                 case CurrentAnimation.Left:
                     character = Image.FromFile($@"C:\Users\Yrulewet\source\repos\LearcnCS\GraphicsLearn\GraphicsLearn\Task_5\Sprite\Walk\RightWalk{currentAnimationIndex}.png");
                     character.RotateFlip(RotateFlipType.Rotate180FlipY);
-                    this.graphics.DrawImage(character, positionPlayer.X, positionPlayer.Y, new Rectangle(new Point(0, 0), new Size(125, 125)), GraphicsUnit.Pixel);
+                    this.graphics.DrawImage(character, positionPlayer.X, positionPlayer.Y);
                     if (!(this.positionPlayer.X < 15)) this.positionPlayer.X -= 5;
                     SetAnimation();
                     LastPressed = CurrentAnimation.Left;
                     break;
                 case CurrentAnimation.None:
-                    this.graphics.DrawImage(character, this.positionPlayer.X, this.positionPlayer.Y, new Rectangle(new Point(0,0), new Size(125, 125)), GraphicsUnit.Pixel);
+                    this.graphics.DrawImage(character, this.positionPlayer.X, this.positionPlayer.Y);
                     SetAnimation();
                     break;
                 case CurrentAnimation.Space:
                     timer.Stop();
+                    JumpCharacter();
                     JumpTimer.Start();
                     break;
                 case CurrentAnimation.Attack:
                     timer.Stop();
                     JumpTimer.Stop();
+                    AttackCharacter();
                     AttackTimer.Start();
                     break;
 

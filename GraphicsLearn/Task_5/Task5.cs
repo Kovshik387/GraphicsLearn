@@ -119,7 +119,7 @@ namespace GraphicsLearn.Task_5
 
             if (LastPressed == CurrentAnimation.Left) character.RotateFlip(RotateFlipType.Rotate180FlipY);
             
-            this.graphics.DrawImage(character, this.positionPlayer.X, this.positionPlayer.Y, new Rectangle(new Point(0, 0), new Size(125, 125)), GraphicsUnit.Pixel);
+            this.graphics.DrawImage(character, this.positionPlayer.X, this.positionPlayer.Y);
         }
 
         private void AttackCharacter()
@@ -128,7 +128,7 @@ namespace GraphicsLearn.Task_5
 
             if (LastPressed == CurrentAnimation.Left) character.RotateFlip(RotateFlipType.Rotate180FlipY);
 
-            this.graphics.DrawImage(character, this.positionPlayer.X, this.positionPlayer.Y, new Rectangle(new Point(0, 0), new Size(125, 125)), GraphicsUnit.Pixel);
+            this.graphics.DrawImage(character, this.positionPlayer.X, this.positionPlayer.Y);
         }
 
         private void CheckUpdate(object sender, EventArgs e)
